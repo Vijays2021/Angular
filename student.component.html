@@ -1,0 +1,27 @@
+<div>
+    <table>
+        <tr>
+            <td> Register number:</td><td><input type="number"  [(ngModel)]="studentModel.regno"> </td>
+        </tr>
+        <tr>
+            <td> Student Name:</td><td><input type="text"  [(ngModel)]="studentModel.studentName" ></td>
+        </tr>
+        <tr>
+            <td> Total marks:</td><td><input type="number"  [(ngModel)]="studentModel.studentMarks"></td>
+        </tr>
+    </table>
+    
+    
+    
+    <table>
+    <tr>
+        <td> Register number:</td><td>{{studentModel.regno}}</td>
+    </tr>
+    <tr>
+        <td> Student Name:</td><td>{{studentModel.studentName}}</td>
+    </tr>
+    <tr>
+        <td> Total marks:</td><td>{{studentModel.studentMarks}}</td>
+    </tr>
+</table>
+</div>
