@@ -1,0 +1,14 @@
+<div>
+    <p>
+    Employee Name   : {{employeeName}}<br>
+    Age             : {{age}}<br>
+    Location        : {{location}}<br>
+    Availability    : {{isAvailable}}<br>
+</p>
+<div>
+    <img src="{{photoPath}}" />
+    <img [src]="photoPath"/>
+</div>    
+<br><br>
+<input type="button" class="button" value="Click Me" (click)="handleClick()" [disabled]="status"  />
+</div>
