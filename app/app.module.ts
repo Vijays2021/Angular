@@ -3,16 +3,20 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { EmployeeComponent } from './employee/employee.component';
 import { StudentComponent } from './student/student.component';
-import { employlistComponent } from './employ/employlist.component';
+//import { employlistComponent } from './employ/employlist.component';
+import { ProductComponent } from './product/product.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { ProductfilterPipe } from './pipes/productfilter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmployeeComponent,
     StudentComponent,
-    employlistComponent
+    //employlistComponent,
+    ProductComponent,
+    EmployeeComponent,
+    ProductfilterPipe
 
   ],
   imports: [
