@@ -1,0 +1,57 @@
+
+
+Choose Category :
+
+<select [(ngModel)]="selectedCategory">
+
+    <option value="Stationary">Stationary</option>
+
+    <option value="Bevarages">Beverages</option>
+
+    <option value="Electronics">Electronics</option>
+
+</select>
+
+<h2>Product Catalog</h2>
+
+<table class="table table-hover table-dark">
+
+    <thead class="head">
+
+        <th scope="row">Product Code </th>
+
+        <th scope="row">Product Description </th>
+
+        <th scope="row">Unitprice </th>
+
+        <th scope="row">Quantity </th>
+
+        <th scope="row">Category </th>
+
+    </thead>
+
+    <tbody class="body">
+
+        <ng-container *ngFor="let product of  productCatalog">
+
+ 
+
+            <tr *ngIf="product.category == selectedCategory" [ngStyle] = "{'color':product.category == 'Stationary'?'red':'blue'}">
+
+                <td>{{product.productCode}}</td>
+
+                <td>{{product.productDesc}}</td>
+
+                <td [ngClass]="product.unitPrice < 30 ? 'class1' : 'class2'">{{product.unitPrice}}</td>
+
+                <td>{{product.quantity}}</td>
+
+                <td>{{product.category}}</td>
+
+            </tr>
+
+        </ng-container>
+
+    </tbody>
+
+</table>

@@ -1,0 +1,22 @@
+<h2>Product Catalog</h2>
+<table class="table table-bordered table-striped">
+    <thead>
+        <th>Product Code </th>
+        <th>Product Description </th>
+        <th>Unitprice </th>
+        <th>Quantity </th>
+        <th>Category </th>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let product of  productCatalog">
+
+            <tr *ngIf="product.category == ''">
+                <td>{{product.productCode}}</td>
+                <td>{{product.productDesc}}</td>
+                <td>{{product.unitPrice}}</td>
+                <td>{{product.quantity}}</td>
+                <td>{{product.category}}</td>
+            </tr>
+        </ng-container>
+    </tbody>
+</table>
