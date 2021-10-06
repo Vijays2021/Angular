@@ -1,0 +1,40 @@
+<br><br>
+Min Price: <input type="text" [(ngModel)]="minPrice"/>  Max Price:<input type="text"  [(ngModel)]="maxPrice" />
+<h2>Product Catalog</h2>
+
+<table class="table table-hover table-dark">
+
+    <thead class="head">
+
+        <th scope="row">Product Code </th>
+
+        <th scope="row">Product Description </th>
+
+        <th scope="row">Unitprice </th>
+
+        <th scope="row">Quantity </th>
+
+        <th scope="row">Category </th>
+
+    </thead>
+
+    <tbody class="body">
+
+        <tr *ngFor="let product of  productCatalog | productfilter : minPrice : maxPrice">
+
+                <td>{{product.productCode}}</td>
+
+                <td>{{product.productDesc}}</td>
+
+                <td>{{product.unitPrice}}</td>
+
+                <td>{{product.quantity}}</td>
+
+                <td>{{product.category}}</td>
+
+            </tr>
+
+
+    </tbody>
+
+</table>
